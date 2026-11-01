@@ -254,7 +254,16 @@ html {
 }
 .hero-title span {
   display: block;
+  color: #69d6c0;
   animation: letter-enter 900ms var(--ease-out) both;
+}
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .hero-title span {
+    background-image: linear-gradient(to bottom, #69d6c0, #58686b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 .hero-portrait {
   position: absolute;
